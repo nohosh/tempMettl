@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color: #111;
+    font-family: helvetica;
+    font-size: 15px;
+
+}
+
+body > div {
+    margin-bottom: 120px; 
+}
+
+
+
+/*-------Progress bar--------*/
+
+.steps {
+    counter-reset: step;
+    margin-top: 21px;
+    padding-bottom: 30px;
+}
+
+.steps li {
+    list-style: none;
+    float: left;
+    width: 33.33%;
+    position: relative;
+    text-align: center;
+}
+
+.steps li::before {
+    content: counter(step);
+    counter-increment: step;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #ddd;
+    display: block;
+    text-align: center;
+    margin: 0 auto 5px auto;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.steps li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    top: 25px;
+    left: -50%;
+    z-index: -1;
+}
+
+.steps li:first-child::after {
+    content: none;
+}
+
+.steps li.active::before {
+    background-color: rgb(83, 62, 143);
+    z-index: 1;
+    color: black;
+
+}
+.steps li.active {
+    color: rgb(83, 62, 143);
+}
+
+/*-------Sign-In--------*/
+
+
+
+
+.sign-in > * {
+    display: block;
+    width: 90%;
+    height: 25px;
+    border: 1px solid #ddd;
+    position: relative;
+    margin: 0 auto 9px auto;
+    padding: 4px 0px 4px 7px; 
+
+}
+
+.sign-in button {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    height: 50px;
+    
+}
+
+/*-------OR---------*/
+.sign-in::after {
+    content: 'OR';
+    position: absolute;
+    left: 48.4%;
+    margin-top: 25px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ddd;
+    line-height: 50px;
+    text-align: center;
+
+    
+
+}
+
+
+
+
+/*-------Sign-Up--------*/
+
+.sign-up > * {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    height: 25px;
+    margin: 0 auto 9px auto;
+    
+
+}
+.sign-up input{
+    border: 1px solid #ddd;
+    padding: 4px 0px 4px 7px; 
+    
+}
+.name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.name > * {
+   width: 49.5%;
+}
+
+.sign-up button {
+    cursor: pointer;
+    background-color: rgb(246,201,67);
+    color: black;
+    height: 50px;
+
+}
+
+/*media querry */
+
