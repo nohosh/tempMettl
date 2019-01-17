@@ -11,13 +11,21 @@ html {
 
 }
 
-body > div {
+body > div 
+    {
     margin-bottom: 120px; 
+}
+.wrapper > div {
+    margin-bottom: 50px;
 }
 
 
 
-/*-------Progress bar--------*/
+
+
+/******************************/
+/*-------PROGRESS-BAR--------*/
+/******************************/
 
 .steps {
     counter-reset: step;
@@ -72,10 +80,12 @@ body > div {
     color: rgb(83, 62, 143);
 }
 
-/*-------Sign-In--------*/
 
 
 
+/******************************/
+/*-------SIGN-IN-------*/
+/******************************/
 
 .sign-in > * {
     display: block;
@@ -96,27 +106,31 @@ body > div {
     
 }
 
-/*-------OR---------*/
-.sign-in::after {
-    content: 'OR';
-    position: absolute;
-    left: 48.4%;
-    margin-top: 25px;
-    border-radius: 50%;
-    width: 50px;
+
+/*---------OR----------*/
+
+
+.or {
+    display: block;
+    width: 100%;    
+}
+.or p{
+    margin: 0 auto;
     height: 50px;
-    border: 1px solid #ddd;
+    width: 50px;
     line-height: 50px;
     text-align: center;
-
-    
-
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background-color: white;
 }
 
 
 
 
-/*-------Sign-Up--------*/
+/******************************/
+/*-------SIGN-UP--------*/
+/******************************/
 
 .sign-up > * {
     display: block;
@@ -150,5 +164,43 @@ body > div {
 
 }
 
-/*media querry */
 
+
+
+/******************************/
+/*-------MEDIA-QUERRY--------*/
+/******************************/
+
+@media screen and (min-width: 768px) {
+
+    body > div 
+    {
+    margin-bottom: 150px; 
+    }
+
+   .wrapper{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+   }
+   .sign-in,
+   .sign-up {
+       width: 49.9%;
+   }
+
+   .or {
+        position: absolute;
+        top: 22%;
+        width: 6%;
+   }
+   .wrapper::after {
+    content: '';
+    position: absolute;
+    height: 40%;
+    width: 1px;
+    background-color: #ddd;
+    top: 23%;
+    left: 50%;
+    z-index: -1;
+   }
+}
